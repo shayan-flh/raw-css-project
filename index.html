@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./carousel/carousel.css">
+    <link rel="stylesheet" href="./offcanvas/offcanvas.css">
+    <link rel="stylesheet" href="./navComp/nav.css">
+    <title>sport shop</title>
+</head>
+
+<body>
+
+
+    <div class="topNav1" id="topNav1">
+
+        <div class="hamburgerMenu">
+            <i class="bi bi-list"></i>
+        </div>
+        <div class="logoDiv" id="logoDiv">
+            <img src="./pic/logos/sports.svg" class="logo" alt="">
+        </div>
+
+        <div class="searchDiv">
+            <form class="searchForm">
+                <input type="text" id="searchInp" placeholder="جستجو محصول">
+                <button class="searchBtn"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+
+        <div class="buttonDiv" id="logoDiv">
+            <button class="loginBtn" title="عضویت / ورود"><i class="bi bi-person-plus"></i></button>
+            <button class="basket" title="سبد خرید"><i class="bi bi-cart"></i></button>
+        </div>
+    </div>
+
+    <div class="outsearchDiv">
+        <form class="searchForm">
+            <input type="text" id="searchInp" placeholder="جستجو محصول">
+            <button class="searchBtn"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+
+    <ul class="itemsUl">
+        <li>
+            <a onmouseenter="collapseShower('shoe-collapse',event)"
+                onmouseleave="collapseUnShower('shoe-collapse',event)" onclick="collapseShower2('shoe-collapse',event)"
+                href="#" class="aItem">کفش
+                ورزشی <i class="bi bi-caret-up-fill rotateClass0"></i></a>
+        </li>
+        <li>
+            <a onmouseenter="collapseShower('cloth-collapse',event)"
+                onmouseleave="collapseUnShower('cloth-collapse',event)"
+                onclick="collapseShower2('cloth-collapse',event)" href="#" class="aItem">لباس
+                ورزشی <i class="bi bi-caret-up-fill rotateClass0"></i></a>
+        </li>
+        <li>
+            <a onmouseenter="collapseShower('accessory-collapse',event)"
+                onmouseleave="collapseUnShower('accessory-collapse',event)"
+                onclick="collapseShower2('accessory-collapse',event)" href="#" class="aItem">تجهیزات ورزشی <i
+                    class="bi bi-caret-up-fill rotateClass0"></i></a>
+        </li>
+        <li>
+            <a onmouseenter="collapseShower('ball-collapse',event)"
+                onmouseleave="collapseUnShower('ball-collapse',event)" onclick="collapseShower2('ball-collapse',event)"
+                href="#" class="aItem">انواع
+                توپ ورزشی <i class="bi bi-caret-up-fill rotateClass0"></i></a>
+        </li>
+    </ul>
+
+    <div class="collapse">
+        <div class="shoe-collapse">1</div>
+        <div class="cloth-collapse">2</div>
+        <div class="accessory-collapse">3</div>
+        <div class="ball-collapse">4</div>
+    </div>
+
+    <!-- ---------offcanvas------------- -->
+    <div class="off-under"></div>
+    <div class="off-under2"></div>
+    <div class="off-under3"></div>
+
+    <div class="offcanvas">
+        <div class="off-header">
+            <div class="off-img">
+                <img src="./pic/logos/sports.svg" class="logo" alt="">
+            </div>
+            <i class="bi bi-x-lg" id="off-close"></i>
+        </div>
+        <div class="off-body">
+            <ul class="off-items">
+                <li class="different-li">
+                    <button class="off-loginBtn" title="عضویت / ورود"><i class="bi bi-person-plus"></i></button>
+                </li>
+                <li><a href="#" onclick="offCollapseShower('off-shoes',event)">
+                        <p>کفش ورزشی</p><i class="bi bi-caret-left-fill rotateClass0"></i>
+                    </a></li>
+                <div class="off-shoes">1</div>
+                <li><a href="#" onclick="offCollapseShower('off-clothes',event)">
+                        <p>لباس ورزشی</p><i class="bi bi-caret-left-fill rotateClass0"></i>
+                    </a></li>
+                <div class="off-clothes">2</div>
+                <li><a href="#" onclick="offCollapseShower('off-accessories',event)">
+                        <p>تجهیزات ورزشی</p><i class="bi bi-caret-left-fill rotateClass0"></i>
+                    </a></li>
+                <div class="off-accessories">3</div>
+                <li><a href="#" onclick="offCollapseShower('off-balls',event)">
+                        <p>انواع توپ ورزشی</p><i class="bi bi-caret-left-fill rotateClass0"></i>
+                    </a></li>
+                <div class="off-balls">4</div>
+            </ul>
+        </div>
+    </div>
+    <!-- ---------------------- -->
+
+    <!-- -----------cart offcanvas----------- -->
+
+    <div class="cart-offcanvas">
+        <div class="off-header">
+            <span class="cart-title">سبد خرید</span>
+            <i class="bi bi-x-lg" id="off-close2"></i>
+        </div>
+        <div class="cart-offcanvas-body">
+
+            <!-- <div class="cart-product">
+                <div class="img-div"><img src="./pic/products/ball1.webp" alt=""></div>
+                <div class="title-div">بیتلاس نمتی نن انب ن </div>
+                <div class="btn-div">
+                    <div class="count-div">
+                        <button class="decreament-btn">-</button>
+                        <span class="count-span">۳</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <div class="price-div">تومان<span class="price-number">&nbsp;۲۹۹۹۹۹۹۹</span></div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <!-- ---------------------- -->
+
+    <!-- -----------carousel----------- -->
+
+    <div class="carousel-row">
+        <div class="carousel">
+            <div id="chevron-left" class="chevron-left"><i class="bi bi-chevron-left"></i></div>
+            <div class="sliders">
+                <a href="#"><img class="slide slide-active" src="./pic/carousel/d-all-6-min.webp" alt=""></a>
+                <a href="#"><img class="slide" src="./pic/carousel/d-all-9-min.webp" alt=""></a>
+                <a href="#"><img class="slide" src="./pic/carousel/d-all-8-min.webp" alt=""></a>
+            </div>
+            <div id="chevron-right" class="chevron-right"><i class="bi bi-chevron-right"></i></div>
+            <div class="carousel-nav">
+                <div class="circle circle-active"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------- -->
+
+    <div class="container">
+        <div class="row">
+            <div class="info">
+                <div class="infoItem">
+                    <a href="#">
+                        <i class="bi bi-recycle"></i>
+                        <div class="infoTitle">ضمانت بازگشت</div>
+                        <div class="infoText">امکان برگشت تا 7 روز</div>
+                    </a>
+                </div>
+                <div class="infoItem">
+                    <a href="#">
+                        <i class="bi bi-rocket-takeoff"></i>
+                        <div class="infoTitle">ارسال سریع</div>
+                        <div class="infoText">24 الا 72 ساعته</div>
+                    </a>
+                </div>
+                <div class="infoItem">
+                    <a href="#">
+                        <i class="bi bi-box-seam"></i>
+                        <div class="infoTitle">ضمانت اصالت</div>
+                        <div class="infoText">برای محصولات اورجینال</div>
+                    </a>
+                </div>
+                <div class="infoItem">
+                    <a href="#">
+                        <i class="bi bi-truck"></i>
+                        <div class="infoTitle">ارسال رایگان</div>
+                        <div class="infoText">سفارشات بالای 500 هزار تومان</div>
+                    </a>
+                </div>
+                <div class="special-infoItem">
+                    <a href="#">
+                        <i class="bi bi-arrows"></i>
+                        <div class="infoTitle">تعویض سایز</div>
+                        <div class="infoText">با خیال راحت خرید کنید</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="titles">دسته بندی های پرطرفدار<br><a class="moreL" href="#">بیشتر...</a></div>
+            <div class="products" id="popular-products"></div>
+        </div>
+        <div class="posters-2">
+            <img src="./pic/posters/snap-picjpg.jpg" alt="snap-tabligh">
+        </div>
+        <div class="row">
+            <div class="titles">فروش ویژه %<br><a class="moreL" href="#">بیشتر...</a></div>
+            <div class="products" id="offer-products"></div>
+        </div>
+        <div class="row">
+            <div class="titles">جدید ترین محصولات<br><a class="moreL" href="#">بیشتر...</a></div>
+            <div class="products" id="new-products"></div>
+        </div>
+        <div class="posters-1">
+            <img src="./pic/posters/big-clothes.webp" width="50%" alt="big-clothes-pic">
+            <img src="./pic/posters/big-shoes.webp" alt="big-shoes-pic" width="50%">
+        </div>
+        <div class="row">
+            <div class="titles">محصولات مردانه<br><a class="moreL" href="#">بیشتر...</a></div>
+            <div class="products" id="men-products"></div>
+        </div>
+        <div class="row">
+            <div class="titles">محصولات زنانه<br><a class="moreL" href="#">بیشتر...</a></div>
+            <div class="products" id="women-products"></div>
+        </div>
+
+        <div class="titles" style="text-align: center;">برند ها</div>
+        <div class="info-title"> تیم ما بهترین کیفیت ها از بهترین برند ها ارائه میدهد......</div>
+        <div class="brands">
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/Adidas.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/Nike Icon.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/Jordan.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/gymshark.png"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/361-brand-logo.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/Puma Red.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic"
+                    src="./pic/logos/Under Armour Red.jpg" alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/vans.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/New-Balance.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic"
+                    src="./pic/logos/Reebok-Logo-2014.jpg" alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/asics2623.jpg"
+                    alt="pic1"></a>
+            <a href="#" class="brand-link link-drag"><img class="brand-pic dragPic" src="./pic/logos/863_fila_logo.jpg"
+                    alt="pic1"></a>
+        </div>
+
+        <div class="titles" style="text-align: center;">مقالات</div>
+        <div class="info-title">جدید ترین مطالب ورزشی</div>
+        <div class="vlogs">
+            <div class="vlog">
+                <img class="vlog-pic dragPic" src="./pic/vlog-pictures/balls.jpg" alt="balls-pic">
+                <div class="vlog-info">
+                    <a href="#" class="vlog-title">فرق توپ فوتسال و فوتبال</a>
+                    <span class="vlog-date"></span>
+                </div>
+                <div class="vlog-footer">
+                    <a href="#" class="vlog-title">مشاهده بیشتر...</a>
+                </div>
+            </div>
+            <div class="vlog">
+                <img class="vlog-pic dragPic" src="./pic/vlog-pictures/deepBreath.jpg" alt="balls-pic">
+                <div class="vlog-info">
+                    <a href="#" class="vlog-title">بهبود تنفس و افزایش حجم ریه</a>
+                    <span class="vlog-date"></span>
+                </div>
+                <div class="vlog-footer">
+                    <a href="#" class="vlog-title">مشاهده بیشتر...</a>
+                </div>
+            </div>
+            <div class="vlog">
+                <img class="vlog-pic dragPic" src="./pic/vlog-pictures/practice-at-home.jpg" alt="balls-pic">
+                <div class="vlog-info">
+                    <a href="#" class="vlog-title">برنامه بدنسازی در خانه</a>
+                    <span class="vlog-date"></span>
+                </div>
+                <div class="vlog-footer">
+                    <a href="#" class="vlog-title">مشاهده بیشتر...</a>
+                </div>
+            </div>
+            <div class="vlog">
+                <img class="vlog-pic dragPic" src="./pic/vlog-pictures/photo-pregnant-woman-with-weights.jpg"
+                    alt="balls-pic">
+                <div class="vlog-info">
+                    <a href="#" class="vlog-title">ورزش در دوران بارداری</a>
+                    <span class="vlog-date"></span>
+                </div>
+                <div class="vlog-footer">
+                    <a href="#" class="vlog-title">مشاهده بیشتر...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4 class="footer-header">footer</h4>
+    </footer>
+
+
+    <script src="./navComp/nav.js"></script>
+    <script src="./offcanvas/offcanvas.js"></script>
+    <script src="./carousel/carousel.js"></script>
+    <script src="./container.js"></script>
+</body>
+
+</html>

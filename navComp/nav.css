@@ -1,0 +1,203 @@
+.topNav1 {
+    display: flex;
+    background-color: #f2f4f4;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 99;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.topNav1>div {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoDiv>img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.hamburgerMenu {
+    display: none !important;
+}
+
+.hamburgerMenu:hover {
+    cursor: pointer;
+}
+
+.searchForm {
+    display: flex;
+    justify-content: end;
+    border: 2px solid #7f8c8d;
+    border-radius: 12px;
+}
+
+.searchForm>input {
+    all: unset;
+    padding: 6px;
+    width: 100%;
+}
+
+.searchForm>button {
+    all: unset;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.outsearchDiv {
+    display: none !important;
+}
+
+.buttonDiv {
+    justify-content: space-evenly !important;
+}
+
+.basket {
+    width: 20px;
+    height: 500px;
+    all: unset;
+    font-size: 26px;
+    cursor: pointer;
+    margin: 6px;
+    color: #7f8c8d;
+}
+
+.loginBtn {
+    width: 20px;
+    height: 500px;
+    all: unset;
+    font-size: 26px;
+    cursor: pointer;
+    margin: 6px;
+    color: #7f8c8d;
+}
+
+.loginBtn:hover {
+    color: #515a5a;
+}
+
+.basket:hover {
+    color: #515a5a;
+}
+
+/* -------------------navItems */
+.itemsUl {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 12px;
+    color: #515a5a;
+    border: 4px solid #e5e8e8;
+    z-index: 99;
+}
+
+.itemsUl li {
+    display: flex;
+}
+
+.itemsUl>li>a {
+    display: flex;
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+.itemsUl li a i {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.itemsUl>li>a:hover {
+    color: #515a5a;
+}
+
+.bi-caret-up-fill {
+    transition: transform 0.2s;
+}
+
+.rotateClass0 {
+    transform: rotate(0);
+}
+
+.rotateClass180 {
+    transform: rotate(-180deg);
+}
+
+.collapse {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    height: fit-content;
+}
+
+.collapse div {
+    position: absolute;
+    background-color: #f2f4f4;
+    width: 100%;
+    height: 60vh;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.3s;
+    overflow-y: hidden;
+}
+
+.off-under2 {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    opacity: 0.5;
+    width: 100%;
+    height: 100vh;
+    z-index: 98;
+    overflow-y: hidden;
+}
+
+/* ----------media***--------- */
+@media only screen and (max-width :768px) {
+    .topNav1 {
+        padding-bottom: 5px;
+        border-bottom: 4px #e5e8e8 solid;
+    }
+
+    .topNav1 .searchDiv {
+        display: none !important;
+    }
+
+    .hamburgerMenu {
+        display: flex !important;
+        font-size: 40px;
+    }
+
+    .bi-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loginBtn {
+        display: none;
+    }
+
+    .bi-cart {
+        display: flex;
+        align-items: center;
+    }
+
+    .outsearchDiv {
+        margin: 5px;
+        display: block !important;
+    }
+
+    .itemsUl {
+        display: none;
+    }
+}
