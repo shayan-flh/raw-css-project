@@ -474,7 +474,9 @@ mainProducts.forEach((product, index) => {
 })
 
 popularProductsDiv.addEventListener('mousedown', onMouseDown2)
+popularProductsDiv.addEventListener('touchstart', onMouseDown2)
 popularProductsDiv.addEventListener('mouseup', onMouseUp2)
+popularProductsDiv.addEventListener('touchend', onMouseUp2)
 popularProductsDiv.addEventListener('mouseenter', onMouseEnter2)
 popularProductsDiv.addEventListener('mouseleave', onMouseLeave2)
 
