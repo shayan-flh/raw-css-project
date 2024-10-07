@@ -224,7 +224,8 @@ function onMouseDown1(e) {
     startX = e.clientX;
     offerProductsDiv.style.cursor = 'grabbing'
     offerProductsDiv.addEventListener('mousemove', onMouseMove1)
-    console.log(e.target);
+    offerProductsDiv.addEventListener('touchmove', onMouseMove1)
+
 }
 
 function onMouseUp1(e) {
@@ -254,6 +255,7 @@ function onMouseDown2(e) {
     startX = e.clientX;
     popularProductsDiv.style.cursor = 'grabbing'
     popularProductsDiv.addEventListener('mousemove', onMouseMove2)
+    popularProductsDiv.addEventListener('touchmove', onMouseMove2)
 }
 
 function onMouseUp2(e) {
@@ -283,6 +285,8 @@ function onMouseDown3(e) {
     startX = e.clientX;
     newProductsDiv.style.cursor = 'grabbing'
     newProductsDiv.addEventListener('mousemove', onMouseMove3)
+    newProductsDiv.addEventListener('touchmove', onMouseMove3)
+
 }
 
 function onMouseUp3(e) {
@@ -311,6 +315,8 @@ function onMouseDown4(e) {
     startX = e.clientX;
     menProductsDiv.style.cursor = 'grabbing'
     menProductsDiv.addEventListener('mousemove', onMouseMove4)
+    menProductsDiv.addEventListener('touchmove', onMouseMove4)
+
 }
 
 function onMouseUp4(e) {
@@ -340,6 +346,8 @@ function onMouseDown5(e) {
     startX = e.clientX;
     womenProductsDiv.style.cursor = 'grabbing'
     womenProductsDiv.addEventListener('mousemove', onMouseMove5)
+    womenProductsDiv.addEventListener('touchmove', onMouseMove5)
+
 }
 
 function onMouseUp5(e) {
@@ -369,6 +377,8 @@ function onMouseDown6B(e) {
     startX = e.clientX;
     brandsDiv.style.cursor = 'grabbing'
     brandsDiv.addEventListener('mousemove', onMouseMove6B)
+    brandsDiv.addEventListener('touchmove', onMouseMove6B)
+
 }
 
 function onMouseUp6B(e) {
@@ -397,6 +407,8 @@ function onMouseDown7E(e) {
     startX = e.clientX;
     vlogDiv.style.cursor = 'grabbing'
     vlogDiv.addEventListener('mousemove', onMouseMove7E)
+    vlogDiv.addEventListener('touchmove', onMouseMove7E)
+
 }
 
 function onMouseUp7E(e) {
