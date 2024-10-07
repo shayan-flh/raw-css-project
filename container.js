@@ -221,11 +221,16 @@ function convertor(number) {
 
 function onMouseDown1(e) {
     isPressed = true;
-    startX = e.clientX;
-    offerProductsDiv.style.cursor = 'grabbing'
-    offerProductsDiv.addEventListener('mousemove', onMouseMove1)
-    offerProductsDiv.addEventListener('touchmove', onMouseMove1)
 
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+
+        offerProductsDiv.style.cursor = 'grabbing'
+        offerProductsDiv.addEventListener('mousemove', onMouseMove1)
+    } else {
+        startX = e.touches['0'].clientX;
+        offerProductsDiv.addEventListener('touchmove', onMouseMove1)
+    }
 }
 
 function onMouseUp1(e) {
@@ -244,18 +249,30 @@ function onMouseLeave1(e) {
 
 function onMouseMove1(e) {
     if (isPressed) {
-        offerProductsDiv.scrollLeft += startX - e.clientX;
+        if (e.type.includes('mouse')) {
+            offerProductsDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            offerProductsDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
     }
+
 }
 
 // ------functions2----
 
 function onMouseDown2(e) {
     isPressed = true;
-    startX = e.clientX;
-    popularProductsDiv.style.cursor = 'grabbing'
-    popularProductsDiv.addEventListener('mousemove', onMouseMove2)
-    popularProductsDiv.addEventListener('touchmove', onMouseMove2)
+
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+
+        popularProductsDiv.style.cursor = 'grabbing'
+        popularProductsDiv.addEventListener('mousemove', onMouseMove2)
+    } else {
+        startX = e.touches['0'].clientX;
+        popularProductsDiv.addEventListener('touchmove', onMouseMove2)
+    }
 }
 
 function onMouseUp2(e) {
@@ -274,7 +291,12 @@ function onMouseLeave2(e) {
 
 function onMouseMove2(e) {
     if (isPressed) {
-        popularProductsDiv.scrollLeft += startX - e.clientX;
+        if (e.type.includes('mouse')) {
+            popularProductsDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            popularProductsDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
     }
 }
 
@@ -282,11 +304,16 @@ function onMouseMove2(e) {
 
 function onMouseDown3(e) {
     isPressed = true;
-    startX = e.clientX;
-    newProductsDiv.style.cursor = 'grabbing'
-    newProductsDiv.addEventListener('mousemove', onMouseMove3)
-    newProductsDiv.addEventListener('touchmove', onMouseMove3)
 
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+
+        newProductsDiv.style.cursor = 'grabbing'
+        newProductsDiv.addEventListener('mousemove', onMouseMove3)
+    } else {
+        startX = e.touches['0'].clientX;
+        newProductsDiv.addEventListener('touchmove', onMouseMove3)
+    }
 }
 
 function onMouseUp3(e) {
@@ -304,7 +331,12 @@ function onMouseLeave3(e) {
 
 function onMouseMove3(e) {
     if (isPressed) {
-        newProductsDiv.scrollLeft += startX - e.clientX;
+        if (e.type.includes('mouse')) {
+            newProductsDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            newProductsDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
     }
 }
 
@@ -312,11 +344,16 @@ function onMouseMove3(e) {
 
 function onMouseDown4(e) {
     isPressed = true;
-    startX = e.clientX;
-    menProductsDiv.style.cursor = 'grabbing'
-    menProductsDiv.addEventListener('mousemove', onMouseMove4)
-    menProductsDiv.addEventListener('touchmove', onMouseMove4)
 
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+
+        menProductsDiv.style.cursor = 'grabbing'
+        menProductsDiv.addEventListener('mousemove', onMouseMove4)
+    } else {
+        startX = e.touches['0'].clientX;
+        menProductsDiv.addEventListener('touchmove', onMouseMove4)
+    }
 }
 
 function onMouseUp4(e) {
@@ -335,7 +372,12 @@ function onMouseLeave4(e) {
 
 function onMouseMove4(e) {
     if (isPressed) {
-        menProductsDiv.scrollLeft += startX - e.clientX;
+        if (e.type.includes('mouse')) {
+            menProductsDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            menProductsDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
     }
 }
 
@@ -343,11 +385,16 @@ function onMouseMove4(e) {
 
 function onMouseDown5(e) {
     isPressed = true;
-    startX = e.clientX;
-    womenProductsDiv.style.cursor = 'grabbing'
-    womenProductsDiv.addEventListener('mousemove', onMouseMove5)
-    womenProductsDiv.addEventListener('touchmove', onMouseMove5)
 
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+
+        womenProductsDiv.style.cursor = 'grabbing'
+        womenProductsDiv.addEventListener('mousemove', onMouseMove5)
+    } else {
+        startX = e.touches['0'].clientX;
+        womenProductsDiv.addEventListener('touchmove', onMouseMove5)
+    }
 }
 
 function onMouseUp5(e) {
@@ -366,7 +413,12 @@ function onMouseLeave5(e) {
 
 function onMouseMove5(e) {
     if (isPressed) {
-        womenProductsDiv.scrollLeft += startX - e.clientX;
+        if (e.type.includes('mouse')) {
+            womenProductsDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            womenProductsDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
     }
 }
 
@@ -374,10 +426,15 @@ function onMouseMove5(e) {
 
 function onMouseDown6B(e) {
     isPressed = true;
-    startX = e.clientX;
-    brandsDiv.style.cursor = 'grabbing'
-    brandsDiv.addEventListener('mousemove', onMouseMove6B)
-    brandsDiv.addEventListener('touchmove', onMouseMove6B)
+
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+        brandsDiv.style.cursor = 'grabbing'
+        brandsDiv.addEventListener('mousemove', onMouseMove6B)
+    } else {
+        startX = e.touches['0'].clientX;
+        brandsDiv.addEventListener('touchmove', onMouseMove6B)
+    }
 
 }
 
@@ -399,6 +456,16 @@ function onMouseMove6B(e) {
     if (isPressed) {
         brandsDiv.scrollLeft += startX - e.clientX;
     }
+
+
+    if (isPressed) {
+        if (e.type.includes('mouse')) {
+            brandsDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            brandsDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
+    }
 }
 // ------functions7----
 
@@ -408,6 +475,16 @@ function onMouseDown7E(e) {
     vlogDiv.style.cursor = 'grabbing'
     vlogDiv.addEventListener('mousemove', onMouseMove7E)
     vlogDiv.addEventListener('touchmove', onMouseMove7E)
+
+
+    if (e.type.includes('mouse')) {
+        startX = e.clientX;
+        vlogDiv.style.cursor = 'grabbing'
+        vlogDiv.addEventListener('mousemove', onMouseMove7E)
+    } else {
+        startX = e.touches['0'].clientX;
+        vlogDiv.addEventListener('touchmove', onMouseMove7E)
+    }
 
 }
 
@@ -427,7 +504,12 @@ function onMouseLeave7E(e) {
 
 function onMouseMove7E(e) {
     if (isPressed) {
-        vlogDiv.scrollLeft += startX - e.clientX;
+        if (e.type.includes('mouse')) {
+            vlogDiv.scrollLeft += startX - e.clientX;
+
+        } else {
+            vlogDiv.scrollLeft += startX - e.touches['0'].clientX;
+        }
     }
 }
 
@@ -463,7 +545,9 @@ offerProducts.forEach((product) => {
 })
 
 offerProductsDiv.addEventListener('mousedown', onMouseDown1)
+offerProductsDiv.addEventListener('touchstart', onMouseDown1)
 offerProductsDiv.addEventListener('mouseup', onMouseUp1)
+offerProductsDiv.addEventListener('touchend', onMouseUp1)
 offerProductsDiv.addEventListener('mouseenter', onMouseEnter1)
 offerProductsDiv.addEventListener('mouseleave', onMouseLeave1)
 
@@ -519,7 +603,9 @@ newProducts.forEach(product => {
 })
 
 newProductsDiv.addEventListener('mousedown', onMouseDown3);
+newProductsDiv.addEventListener('touchstart', onMouseDown3);
 newProductsDiv.addEventListener('mouseup', onMouseUp3);
+newProductsDiv.addEventListener('touchend', onMouseUp3);
 newProductsDiv.addEventListener('mouseenter', onMouseEnter3);
 newProductsDiv.addEventListener('mouseleave', onMouseLeave3);
 
@@ -551,7 +637,9 @@ menProducts.forEach(product => {
 })
 
 menProductsDiv.addEventListener('mousedown', onMouseDown4);
+menProductsDiv.addEventListener('touchstart', onMouseDown4);
 menProductsDiv.addEventListener('mouseup', onMouseUp4);
+menProductsDiv.addEventListener('touchen', onMouseUp4);
 menProductsDiv.addEventListener('mouseenter', onMouseEnter4);
 menProductsDiv.addEventListener('mouseleave', onMouseLeave4);
 
@@ -583,7 +671,9 @@ womenProducts.forEach(product => {
 })
 
 womenProductsDiv.addEventListener('mousedown', onMouseDown5);
+womenProductsDiv.addEventListener('touchstart', onMouseDown5);
 womenProductsDiv.addEventListener('mouseup', onMouseUp5);
+womenProductsDiv.addEventListener('touchend', onMouseUp5);
 womenProductsDiv.addEventListener('mouseenter', onMouseEnter5);
 womenProductsDiv.addEventListener('mouseleave', onMouseLeave5);
 
@@ -591,7 +681,9 @@ womenProductsDiv.addEventListener('mouseleave', onMouseLeave5);
 // --------brnads--------
 
 brandsDiv.addEventListener('mousedown', onMouseDown6B);
+brandsDiv.addEventListener('touchstart', onMouseDown6B);
 brandsDiv.addEventListener('mouseup', onMouseUp6B);
+brandsDiv.addEventListener('touchend', onMouseUp6B);
 brandsDiv.addEventListener('mouseenter', onMouseEnter6B);
 brandsDiv.addEventListener('mouseleave', onMouseLeave6B);
 
@@ -599,7 +691,9 @@ brandsDiv.addEventListener('mouseleave', onMouseLeave6B);
 
 
 vlogDiv.addEventListener('mousedown', onMouseDown7E);
+vlogDiv.addEventListener('touchstart', onMouseDown7E);
 vlogDiv.addEventListener('mouseup', onMouseUp7E);
+vlogDiv.addEventListener('touchend', onMouseUp7E);
 vlogDiv.addEventListener('mouseenter', onMouseEnter7E);
 vlogDiv.addEventListener('mouseleave', onMouseLeave7E);
 
