@@ -794,4 +794,3 @@ vlogDates.forEach(date => {
 
     date.innerHTML = fullDate;
 });
-
