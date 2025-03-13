@@ -8,7 +8,7 @@ To view or work on this project, follow the steps below.
 
 ### Prerequisites
 
-You only need a modern web browser to view this project. No additional tools or dependencies are required.
+You only need a modern web browser to view this project. No additional tools or dependencies are required
 
 ### Installation
 
@@ -17,3 +17,5 @@ You only need a modern web browser to view this project. No additional tools or 
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
    cd your-repo-name
+
+and then double click on 
